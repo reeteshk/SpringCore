@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="Emp" class="com.springcore.collections.Emp">
+        <property name="name" >
+            <value>Reetesh</value>
+        </property>
+        <property name="phones" >
+            <list>
+            <value>8923745923</value>
+            <value>23412134235</value>
+            <value>234513534</value>
+            <value>89237453923</value>
+            </list>
+        </property>
+        <property name="addresses" >
+            <set>
+                <value>Kanpur</value>
+                <value>Lucknow</value>
+                <value>Delhi</value>
+                <value>kanpur</value>
+            </set>
+        </property>
+        <property name="courses" >
+            <map>
+                <entry key="java" value="2months"/>
+                <entry key="python" value="3months"/>
+                <entry key="cpp" value="4months"/>
+                <entry key="sql" value="5months"/>
+            </map>
+        </property>
+    </bean>
+    <bean name="student2" class="org.example.Student">
+        <property name="studentId" value="345"/>
+        <property name="studentName"  value="Raushan"/>
+        <property name="studentAddress" value="New Delhi" />
+    </bean>
+
+    <bean name="student3" class="org.example.Student" p:studentId="987" p:studentName="Rishabh" p:studentAddress="Mathura"/>
+
+<!--    <bean id="..." class="...">-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--    </bean>-->
+    <!-- more bean definitions go here -->
+</beans>

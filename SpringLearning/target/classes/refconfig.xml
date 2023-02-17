@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd">
+<!--    <bean name="A" class="com.springcore.ref.A">-->
+<!--        <property name="ob" >-->
+<!--            <ref bean="B"/>-->
+<!--        </property>-->
+<!--        <property name="ob" ref="B"/>-->
+<!--        <property name="x" value="49"/>-->
+<!--    </bean>-->
+
+    <bean class="com.springcore.ref.A" name="A" p:ob-ref="B" p:x="49"/>
+    <bean name="B" class="com.springcore.ref.B">
+        <property name="y" value="45"/>
+    </bean>
+
+<!--    <bean id="..." class="...">-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--    </bean>-->
+    <!-- more bean definitions go here -->
+</beans>
